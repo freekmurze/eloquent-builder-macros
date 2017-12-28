@@ -1,8 +1,5 @@
 # Eloquent builder macros
 
-[![Latest Stable Version](https://poser.pugx.org/exyplis/eloquent-builder-macros/v/stable)](https://packagist.org/packages/exyplis/eloquent-builder-macros)
-[![Latest Unstable Version](https://poser.pugx.org/exyplis/eloquent-builder-macros/v/unstable)](https://packagist.org/packages/exyplis/eloquent-builder-macros)
-[![Total Downloads](https://poser.pugx.org/exyplis/eloquent-builder-macros/downloads)](https://packagist.org/packages/exyplis/eloquent-builder-macros)
 [![License](https://poser.pugx.org/exyplis/eloquent-builder-macros/license)](https://packagist.org/packages/exyplis/eloquent-builder-macros)
 [![StyleCI](https://styleci.io/repos/115618166/shield?branch=master)](https://styleci.io/repos/115618166)
 
