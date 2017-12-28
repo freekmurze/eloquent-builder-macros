@@ -1,4 +1,4 @@
-# Very short description of the package
+# Eloquent builder macros
 
 [![Latest Stable Version](https://poser.pugx.org/exyplis/eloquent-builder-macros/v/stable)](https://packagist.org/packages/exyplis/eloquent-builder-macros)
 [![Latest Unstable Version](https://poser.pugx.org/exyplis/eloquent-builder-macros/v/unstable)](https://packagist.org/packages/exyplis/eloquent-builder-macros)
@@ -21,20 +21,20 @@ composer require exyplis/eloquent-builder-macros
 Add this entry to `providers` array in your `config/app.php` file.
 ```php
 Exyplis\EloquentBuilderMacros\EloquentBuilderMacrosServiceProvider::class
-``` 
+```
 
 ### Laravel 5.5+
 The package will automatically register itself, so you don't need to do anything else.
 
 ## Available macros
  - [`notEmptyWhere`](#notEmptyWhere)
- - [`notEmptyWhereIn`](#notEmptyWhereIn) 
+ - [`notEmptyWhereIn`](#notEmptyWhereIn)
 
 ### `notEmptyWhere`
 Check is passed parameter empty, and if not, adds `where` condition on `$column` to exiting query.
-Useful when you have complex query, with a lot of constructions like  
+Useful when you have complex query, with a lot of constructions like
 
- 
+
 ##### Signature:
 ```php
 notEmptyWhere($column,$param)
