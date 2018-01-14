@@ -27,8 +27,9 @@ Exyplis\EloquentBuilderMacros\EloquentBuilderMacrosServiceProvider::class
 The package will automatically register itself, so you don't need to do anything else.
 
 ## Available macros
- - [`notEmptyWhere`](#notEmptyWhere)
- - [`notEmptyWhereIn`](#notEmptyWhereIn)
+ - [`notEmptyWhere`](###notEmptyWhere)
+ - [`notEmptyWhereIn`](###notEmptyWhereIn)
+ - [`if`](#if)
 
 ### `notEmptyWhere`
 Check is passed parameter empty, and if not, adds `where` condition on `$column` to exiting query.
@@ -68,6 +69,24 @@ DummyModel::where('some_column','some_value')->notEmptyWhereIn('column',$request
 ```php
 DummyModel::where('some_column','some_value')->when('$request->has('user_ids'), function($query){
     return $query->whereIn('user_id', $request->input('user_ids');
+})->get();
+```
+
+### `if`
+Check passed condition, and adds custom `where` clause to query.
+
+##### Signature:
+```php
+if($condition, $column, $operator, $value)
+```
+##### Example:
+```php
+DummyModel::where('some_column','some_value')->if($request->customer_id, 'customer_id', '=', $request->customer_id)->get()
+```
+// Same as:
+```php
+DummyModel::where('some_column','some_value')->when($request->customer_id, function($query) use ($request){
+    return $query->where('customer_id', $request->customer_id);
 })->get();
 ```
 
