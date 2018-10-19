@@ -16,7 +16,7 @@ use Illuminate\Database\Query\Builder;
  */
 Builder::macro('searchIn', function ($attributes, string $needle) {
     return $this->where(function (Builder $query) use ($attributes,$needle) {
-        foreach ($attributes as $attribute) {
+        foreach (array_wrap($attributes) as $attribute) {
             $query->orWhere($attribute, 'LIKE', "%{$needle}%");
         }
     });
