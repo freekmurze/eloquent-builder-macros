@@ -6,11 +6,11 @@
 [![License](https://poser.pugx.org/exyplis/eloquent-builder-macros/license)](https://packagist.org/packages/exyplis/eloquent-builder-macros)
 [![StyleCI](https://styleci.io/repos/115618166/shield?branch=master)](https://styleci.io/repos/115618166)
 
-This package contains few helpful Eloquent builder macros, curated by Exyplis devs team. We find out this ones useful in day-to-day development, since we ❤️ clean, readable and maintainable code. 
+This package contains few helpful Eloquent builder macros, curated by Exyplis devs team. We find out this ones useful in day-to-day development, since we ❤️ clean, readable and maintainable code.
 
 Compatible with Laravel v5.4+.
 
-*P.S. If you have any useful macro for Laravel Eloquent Builder, which is not presented here, feel free to add it to our collection, we appreciate your support and gladly merge it 🤝*
+_P.S. If you have any useful macro for Laravel Eloquent Builder, which is not presented here, feel free to add it to our collection, we appreciate your support and gladly merge it 🤝_
 
 ## Installation
 
@@ -34,12 +34,13 @@ The package will automatically register itself, so you don't need to do anything
 
 ## Available macros
 
-- [`notEmptyWhere`](###notEmptyWhere)
-- [`notEmptyWhereIn`](###notEmptyWhereIn)
-- [`if`](#if)
-- [`addSubSelect`](#addSubSelect)
-- [`orderBySub`](#orderBySub)
-- [`orderBySubDesc`](#orderBySubDesc)
+-   [`notEmptyWhere`](###notEmptyWhere)
+-   [`notEmptyWhereIn`](###notEmptyWhereIn)
+-   [`if`](#if)
+-   [`addSubSelect`](#addSubSelect)
+-   [`orderBySub`](#orderBySub)
+-   [`orderBySubDesc`](#orderBySubDesc)
+-   [`searchIn`](#searchIn)
 
 ### `notEmptyWhere`
 
@@ -129,7 +130,7 @@ if($condition, $column, $operator, $value)
 
 ```diff
 -Before
-+After 
++After
 ```
 
 ### [`orderBySubDesc`](#orderBySubDesc)
@@ -147,6 +148,20 @@ if($condition, $column, $operator, $value)
 +After
 ```
 
+### [`searchIn`](#searchIn)
+
+##### Signature:
+
+```php
+ searchIn($attrtibutes, $needle)
+```
+
+##### Example:
+
+```php
+    // Get row, where name or email contains `john`
+    Model::search(['name','email',], 'john')->get();
+```
 
 ### Changelog
 
@@ -162,8 +177,8 @@ If you discover any security related issues, please email bks@exyplis.com instea
 
 ## Credits
 
-- [Kostiantyn Bozhko](https://github.com/bozhkos)
-- [All Contributors](../../contributors)
+-   [Kostiantyn Bozhko](https://github.com/bozhkos)
+-   [All Contributors](../../contributors)
 
 ## License
 
