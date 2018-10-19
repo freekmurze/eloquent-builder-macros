@@ -2,7 +2,7 @@
 
 namespace Exyplis\EloquentBuilderMacros\Macros;
 
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Query\Builder;
 
 /*
  * Adds sub query to exiting one.

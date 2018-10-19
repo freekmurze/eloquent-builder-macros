@@ -2,7 +2,7 @@
 
 namespace Exyplis\EloquentBuilderMacros\Macros;
 
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Query\Builder;
 
 /*
  * Check is specified param is empty,

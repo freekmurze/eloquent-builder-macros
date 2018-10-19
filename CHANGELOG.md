@@ -2,7 +2,11 @@
 
 All notable changes to `exyplis/eloquent-builder-macros` will be documented in this file
 
-## 1.0.4 - 2018-10-15
+## 1.0.5 - 2018-10-19
+
+-   Macro `Illuminate\Database\Query\Builder` instead of `Illuminate\Database\Eloquent\Builder`
+
+## 1.0.4 - 2018-10-19
 
 -   Adds `searchIn` macro
 
